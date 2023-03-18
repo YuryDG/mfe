@@ -1,8 +1,14 @@
 import React from 'react'
-import { mount } from 'marketing/MarketingApp'
-
-console.log({ mount })
+import MarketingApp from './components/MarketingApp'
+// Note that: we create this component inside the container,
+// inside it uses the mount exported for marketing app to mount the component
 
 export default () => {
-  return <h1>Hi there</h1>
+  return (
+    <div>
+      <h1>Hi there</h1>
+      <hr />
+      <MarketingApp />
+    </div>
+  )
 }
