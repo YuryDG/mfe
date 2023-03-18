@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 
 // Mount Function
-const mount = (el) => {
+export const mount = (el) => {
   ReactDOM.render(<App />, el)
 }
 
