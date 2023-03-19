@@ -18,6 +18,7 @@ const devConfig = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
+        // Note that for prod this url should be dynamic, since we need the url for the real domain
         marketing: 'marketing@http://localhost:8081/remoteEntry.js'
       },
       shared: packageJson.dependencies
