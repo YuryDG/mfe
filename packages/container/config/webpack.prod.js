@@ -19,7 +19,7 @@ const prodConfig = {
       name: 'container',
       remotes: {
         // Domain is dynamic for production, so we will get it from an environment variable
-        marketing: `marketing@${domain}/marketing/remoteEntry.js`
+        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`
       },
       shared: packageJson.dependencies
     })
