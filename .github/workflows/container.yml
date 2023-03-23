@@ -37,6 +37,7 @@ jobs:
       
       # Automatic cache invalidation 
       # Note that we repeat the credentials on the files and thats because we want to explicit say which env variables we have access to on each step
+      # This will create a new invalidation inside our CloudFront distribution
       - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/container/latest/index.html"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
